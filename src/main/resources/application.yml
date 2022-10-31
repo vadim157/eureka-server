@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: eureka-server
+
+server:
+  port: ${PORT:8761}
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    eureka-server-connect-timeout-seconds: 60
+    eureka-service-url-poll-interval-seconds: 15
+    healthcheck:
+      enabled: true
+  server:
+    expected-client-Renewal-interval-seconds: 20
+  instance:
+    hostname: my-eureka-server.com
+    lease-expiration-duration-in-seconds: 70
